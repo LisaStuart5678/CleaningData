@@ -82,8 +82,9 @@ tidy_data2 = tbl_df(mean_sd2) %>%
     group_by(subject, activity) %>%
     summarize_each(funs(mean))
 
-tidy_data_out = write_csv(tidy_data, "./tidy_data.csv", na = "NA", append = FALSE, 
+# tidy_data_out = write_csv(tidy_data, "./tidy_data.csv", na = "NA", append = FALSE, 
                             col_names = TRUE)
 
-tidy_data_out2 = write_csv(tidy_data2, "./tidy_data2.csv", na = "NA", append = FALSE, 
+# tidy_data_out2 = write_csv(tidy_data2, "./tidy_data2.csv", na = "NA", append = FALSE, 
                           col_names = TRUE)
+write.table(tidy_data, "./tidy_data.txt", row.names = FALSE) 
