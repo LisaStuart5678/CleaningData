@@ -1,0 +1,15 @@
+---
+title: "Session Info"
+author: "Lisa Stuart"
+date: "March 14, 2016"
+output: html_document
+---
+## Session information
+
+Here is the session information 
+
+```{r session_info}
+devtools::session_info()
+```
+
+This document was processed on: `r Sys.Date()`.
